@@ -1,0 +1,11 @@
+[package]
+name = "game"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = []
+trace = ["bevy/trace", "bevy/trace_tracy"]
+
+[dependencies]
+bevy = { version = "0.14" }

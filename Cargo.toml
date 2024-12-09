@@ -1,0 +1,30 @@
+[package]
+name = "mini"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+exclude = []
+members = ["crates/*", "platforms/*"]
+
+[profile.dev]
+opt-level = 1
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+strip = true
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = false
+rpath = false
+panic = 'abort'
+incremental = false
+overflow-checks = false
+[profile.release.package."*"]
+opt-level = 3
+codegen-units = 1
+debug = false
+incremental = false
+overflow-checks = false
