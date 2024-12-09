@@ -8,4 +8,4 @@ default = []
 trace = ["bevy/trace", "bevy/trace_tracy"]
 
 [dependencies]
-bevy = { version = "0.15" }
+bevy = { version = "0.14" }
