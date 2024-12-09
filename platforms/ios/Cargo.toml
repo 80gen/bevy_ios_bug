@@ -8,8 +8,8 @@ name = "ios"
 crate-type = ["staticlib"]
 
 [dependencies]
-bevy = { version = "0.14" }
-game = { path = "../../crates/game", features = ["trace"] }
+bevy = { version = "0.15" }
+game = { path = "../../crates/game" }
 
 [target.aarch64-apple-ios-sim.dependencies]
-game = { path = "../../crates/game", features = ["trace"] }
+game = { path = "../../crates/game" }

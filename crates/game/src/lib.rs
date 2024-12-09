@@ -2,10 +2,8 @@ use bevy::prelude::*;
 
 #[cfg(any(target_os = "android", target_os = "ios"))]
 fn make_window() -> Window {
-    use bevy::window::WindowMode;
     Window {
         resizable: false,
-        mode: WindowMode::BorderlessFullscreen,
         recognize_rotation_gesture: true,
         ..default()
     }
