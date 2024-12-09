@@ -1,4 +1,4 @@
-use bevy::prelude::*;
+use bevy::{log::LogPlugin, prelude::*};
 
 #[cfg(any(target_os = "android", target_os = "ios"))]
 fn make_window() -> Window {
@@ -29,10 +29,18 @@ fn make_window() -> Window {
 
 pub fn run() {
     App::new()
-        .add_plugins(DefaultPlugins.set(WindowPlugin {
-            primary_window: make_window().into(),
-            ..default()
-        }))
+        .add_plugins(
+            DefaultPlugins
+                .set(WindowPlugin {
+                    primary_window: make_window().into(),
+                    ..default()
+                })
+                .set(LogPlugin {
+                    custom_layer: |_| None,
+                    filter: "info,winit=error".into(),
+                    level: bevy::log::Level::INFO,
+                }),
+        )
         .add_systems(Startup, setup)
         .run();
 }

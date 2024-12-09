@@ -8,5 +8,5 @@ name = "ios"
 crate-type = ["staticlib"]
 
 [dependencies]
-bevy = { version = "0.14" }
 game = { path = "../../crates/game" }
+bevy = { version = "0.14" }
