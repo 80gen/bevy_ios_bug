@@ -1,0 +1,15 @@
+[package]
+name = "ios"
+edition = "2021"
+publish = false
+
+[lib]
+name = "ios"
+crate-type = ["staticlib"]
+
+[dependencies]
+bevy = { version = "0.14" }
+game = { path = "../../crates/game", features = ["trace"] }
+
+[target.aarch64-apple-ios-sim.dependencies]
+game = { path = "../../crates/game", features = ["trace"] }
