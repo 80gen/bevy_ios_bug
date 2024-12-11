@@ -1,0 +1,13 @@
+[package]
+name = "android"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "android"
+crate-type = ["cdylib"]
+
+[dependencies]
+bevy = { version = "0.14" }
+game = { path = "../../crates/game" }

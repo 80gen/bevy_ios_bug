@@ -1,0 +1,8 @@
+/build
+.gradle
+.idea
+.DS_Store
+build
+.cxx
+local.properties
+mini_android/app/src/main/jniLibs/*
